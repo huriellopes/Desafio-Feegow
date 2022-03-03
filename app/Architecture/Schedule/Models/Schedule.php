@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Application\Schedule\Models;
+namespace App\Architecture\Schedule\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Schedule extends Model
 {
-    use HasFactory;
-
     protected $table = 'schedules';
 
     protected $primaryKey = 'id';
@@ -19,8 +16,6 @@ class Schedule extends Model
         'name',
         'cpf',
         'source_id',
-        'birthdate',
-        'created_at',
-        'updated_at'
+        'birthdate'
     ];
 }

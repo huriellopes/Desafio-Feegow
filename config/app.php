@@ -175,6 +175,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * CUSTOM APPLICATION SERVICE PROVIDERS
+         */
+        App\Architecture\Schedule\Providers\ScheduleAppServiceProvider::class,
+        App\Architecture\Patient\Providers\PatientAppServiceProvider::class,
+        App\Architecture\Professional\Providers\ProfessionalAppServiceProvider::class,
+        App\Architecture\Specialties\Providers\SpecialtiesAppServiceProvider::class,
+
     ],
 
     /*

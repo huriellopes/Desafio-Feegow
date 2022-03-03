@@ -15,6 +15,12 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->integer('specialty_id');
+            $table->integer('professional_id');
+            $table->string('name');
+            $table->string('cpf', 14)->unique();
+            $table->integer('source_id');
+            $table->date('birthdate');
             $table->timestamps();
         });
     }
