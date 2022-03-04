@@ -5,9 +5,9 @@ namespace App\Enum;
 class ScheduleEnum
 {
     //Messages
-    const MESSAGE_BAD_LIST = 'Error listing appointments.';
-    const MESSAGE_BAD_REQUEST = 'Error when scheduling.';
-    const SUCCESS = 'Appointment successfully scheduled.';
+    const MESSAGE_BAD_LIST = 'Erro ao listar agendamentos.';
+    const MESSAGE_BAD_REQUEST = 'Erro ao agendar.';
+    const SUCCESS = 'Atendimento agendado com sucesso.';
 
     //Status
     const OK = 200;
