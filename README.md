@@ -37,6 +37,13 @@
   - API da Feegow Clinic
   - Banco de Dados PostgreSQL
 
+## O que foi feito no desafio:
+
+- Select box de especialidades
+- Listagem de profissionais a partir da especialidade
+- Finalização de Agendamento
+- Listagem de Agendamentos realizados
+
 ## ⚡ Mão na massa:
 
 > Você pode realizar o clone deste repositório ou baixar o arquivo .zip!
@@ -68,6 +75,9 @@ Para baixar o zip: [https://github.com/huriellopes/Desafio-Feegow/archive/main.z
       php artisan key:generate
       
       # configure as seguintes variaveis de ambiente
+      FEEGOW_APIURL=https://api.feegow.com/v1/api
+      FEEGOW_APIKEY= # Key fornecida pela feegow
+      
       DB_CONNECTION=pgsql # default = mysql
       DB_HOST=127.0.0.1 ou localhost
       DB_PORT=5432 # default = 3306
@@ -76,6 +86,9 @@ Para baixar o zip: [https://github.com/huriellopes/Desafio-Feegow/archive/main.z
       DB_PASSWORD=
       
       # **ATENÇÃO**: Deve ser PostgreSQL e lembre-se de criar o schema/banco!
+      
+      # Depois de realizado as configurações
+      php artisan migrate
       
       # Caso queira desafazer
       php artisan migrate:rollback
@@ -136,7 +149,7 @@ Para baixar o zip: [https://github.com/huriellopes/Desafio-Feegow/archive/main.z
 
     # O banco de dados está isolado, apenas a aplicação acessa!
   
-    # Para subir os dois containers
+    # Para subir os containers
     docker-compose up -d
     
     # Depois acesse o container de servidor
@@ -145,8 +158,8 @@ Para baixar o zip: [https://github.com/huriellopes/Desafio-Feegow/archive/main.z
     # Rode o composer
     composer install
     
-    # Depois o migrate e seed
-    php artisan migrate --seed
+    # Depois o migrate
+    php artisan migrate
     
     # Caso queira desafazer
     php artisan migrate:rollback
